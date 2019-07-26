@@ -20,11 +20,12 @@ pipeline{
         sh 'sudo rm -r *;sudo git clone https://github.com/Prashanth0797/Jenkins_sample.git'
       }
     }
-    stage('aws copy to s3'){
+    stage('CFT'){
       steps{
         sh 'ls'
         sh 'pwd'
         sh 'aws s3 cp /var/lib/jenkins/workspace/Multi_pipe_master/Jenkins_sample/images.jfif s3://jenkins-prashanth/'
+        sh 'aws cloudformation create-stack --stack-name createec2 --template-body /var/lib/jenkins/workspace/Multi_pipe_master/Jenkins_sample/cerate_ec2_cft.json'
       }
     }
     
