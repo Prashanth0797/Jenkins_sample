@@ -22,6 +22,12 @@ pipeline{
         sh 'sudo rm -r *;sudo git clone https://github.com/Prashanth0797/Jenkins_sample.git'
       }
     }
+    stage('terra init'){
+      steps{
+        
+        sh 'terraform init ./Jenkins_sample'
+      }
+    }
 
  }
   
