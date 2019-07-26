@@ -25,6 +25,7 @@ pipeline{
       steps{
         
         sh 'cd /var/lib/jenkins/workspace/terraform_pipeline/Jenkins_sample'
+        sh 'ls'
         sh 'sudo terraform init'
       }
     }
