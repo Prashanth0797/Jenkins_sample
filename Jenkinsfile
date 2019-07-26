@@ -24,8 +24,8 @@ pipeline{
     stage('terra init'){
       steps{
         
-        sh 'cd /var/lib/jenkins/workspace/terraform_pipeline/Jenkins_sample/Jenkins_sample'
-        sh 'ls'
+        sh 'cd /var/lib/jenkins/workspace/terraform_pipeline/Jenkins_sample'
+        sh 'pwd'
         sh 'sudo terraform init'
       }
     }
@@ -33,6 +33,8 @@ pipeline{
       steps{
         
         sh 'cd /var/lib/jenkins/workspace/terraform_pipeline/Jenkins_sample'
+        sh 'pwd'
+        sh 'ls'
         sh 'sudo terraform validate'
       }
     }
