@@ -17,7 +17,7 @@ pipeline{
     
     stage('git clone'){
       steps{
-        
+        sh 'rm -rf /var/lib/jenkins/workspace/Multi_pipe_master/*'
         sh 'sudo rm -r *;sudo git clone https://github.com/Prashanth0797/Jenkins_sample.git'
       }
     }
