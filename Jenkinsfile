@@ -24,7 +24,7 @@ pipeline{
     stage('terra init'){
       steps{
         
-        sh 'cd /var/lib/jenkins/workspace/Multi_pipe_master@2/Jenkins_sample'
+        sh 'cd /var/lib/jenkins/workspace/Multi_pipe_master/Jenkins_sample'
         sh 'pwd'
         sh 'sudo terraform init'
       }
@@ -32,7 +32,7 @@ pipeline{
     stage('terra validate'){
       steps{
         
-        sh 'ccd /var/lib/jenkins/workspace/Multi_pipe_master@2/Jenkins_sample'
+        sh 'ccd /var/lib/jenkins/workspace/Multi_pipe_master/Jenkins_sample'
         sh 'pwd'
         sh 'ls'
         sh 'sudo terraform validate'
@@ -41,14 +41,14 @@ pipeline{
   stage('terra plan'){
       steps{
         
-        sh 'cd /var/lib/jenkins/workspace/Multi_pipe_master@2/Jenkins_sample'
+        sh 'cd /var/lib/jenkins/workspace/Multi_pipe_master/Jenkins_sample'
         sh 'sudo terraform plan'
       }
     }
     stage('terra apply'){
       steps{
         
-        sh 'cd /var/lib/jenkins/workspace/Multi_pipe_master@2/Jenkins_sample'
+        sh 'cd /var/lib/jenkins/workspace/Multi_pipe_master/Jenkins_sample'
         sh 'sudo terraform apply'
       }
     }
