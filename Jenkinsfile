@@ -12,6 +12,7 @@ pipeline{
       steps{
       sh 'sudo su'  
       sh 'echo "started"'
+      sh 'pwd'
       }
     }
     
