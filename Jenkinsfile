@@ -45,7 +45,7 @@ pipeline{
       steps{
         
         sh 'ls'
-        sh 'sudo terraform apply /var/lib/jenkins/workspace/Multi_pipe_master/Jenkins_sample/'
+        sh 'sudo terraform apply -input=false -auto-approve /var/lib/jenkins/workspace/Multi_pipe_master/Jenkins_sample/'
       }
     }
  }
