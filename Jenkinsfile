@@ -24,7 +24,7 @@ pipeline{
     stage('terra init'){
       steps{
         sh 'ls'
-        sh 'cp /var/lib/jenkins/workspace/Multi_pipe_master/Jenkins_sample /var/lib/jenkins/workspace/Multi_pipe_master'
+        sh 'cp -a /var/lib/jenkins/workspace/Multi_pipe_master/Jenkins_sample/. /var/lib/jenkins/workspace/Multi_pipe_master'
         sh 'pwd'
         sh 'sudo terraform init'
       }
