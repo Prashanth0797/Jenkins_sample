@@ -1,5 +1,5 @@
 node{
-stage('SCM Checkout'){
+stage('build'){
   git 'https://github.com/Prashanth0797/Jenkins_sample'
   }
 }
