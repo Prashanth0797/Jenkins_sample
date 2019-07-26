@@ -10,6 +10,7 @@ pipeline{
     
     stage('terraform started'){
       steps{
+      sh 'sudo su'  
       sh 'echo "started"'
       }
     }
