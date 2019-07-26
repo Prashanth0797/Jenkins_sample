@@ -29,7 +29,27 @@ pipeline{
         sh 'terraform init'
       }
     }
-
+    stage('terra validate'){
+      steps{
+        
+        sh 'cd /var/lib/jenkins/workspace/terraform_pipeline/Jenkins_sample'
+        sh 'terraform validate'
+      }
+    }
+  stage('terra plan'){
+      steps{
+        
+        sh 'cd /var/lib/jenkins/workspace/terraform_pipeline/Jenkins_sample'
+        sh 'terraform plan'
+      }
+    }
+    stage('terra apply'){
+      steps{
+        
+        sh 'cd /var/lib/jenkins/workspace/terraform_pipeline/Jenkins_sample'
+        sh 'terraform apply'
+      }
+    }
  }
   
 }
