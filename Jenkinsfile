@@ -25,7 +25,7 @@ pipeline{
         sh 'ls'
         sh 'pwd'
         sh 'aws s3 cp /var/lib/jenkins/workspace/Multi_pipe_master/Jenkins_sample/images.jfif s3://jenkins-prashanth/'
-        sh 'aws cloudformation create-stack --stack-name createec2 --template-body /var/lib/jenkins/workspace/Multi_pipe_master/Jenkins_sample/cerate_ec2_cft.json'
+        sh 'aws cloudformation create-stack --stack-name createec2 --template-body /var/lib/jenkins/workspace/Multi_pipe_master/Jenkins_sample/cerate_ec2_cft.json --region us-east-1'
       }
     }
     
