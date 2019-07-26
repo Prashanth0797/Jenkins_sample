@@ -23,7 +23,7 @@ pipeline{
     }
     stage('terra init'){
       steps{
-        
+        sh 'ls'
         sh 'cd /var/lib/jenkins/workspace/Multi_pipe_master/Jenkins_sample'
         sh 'pwd'
         sh 'sudo terraform init'
