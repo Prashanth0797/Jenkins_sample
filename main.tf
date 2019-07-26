@@ -7,12 +7,12 @@ resource "aws_instance" "jin" {
     ami = "${var.my_ami}"
    instance_type="${var.my_instance_type}"
 tags={Name = "${var.instance_name}-${count.index+1}"}
-  vpc_security_group_ids = ["${aws_security_group.instance_sg_http_ssh.id}"]
+  vpc_security_group_ids = ["${aws_security_group.instance_sg_http_ssh1.id}"]
 }
 
 
-resource "aws_security_group" "instance_sg_http_ssh" {
-  name = "instance_sg_http_ssh"
+resource "aws_security_group" "instance_sg_http_ssh1" {
+  name = "instance_sg_http_ssh1"
   description = "Web Security Group"
 
   ingress {
