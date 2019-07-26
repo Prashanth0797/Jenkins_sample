@@ -25,7 +25,8 @@ pipeline{
     stage('terra init'){
       steps{
         
-        sh 'terraform init /var/lib/jenkins/workspace/terraform_pipeline/Jenkins_sample'
+        sh 'cd /var/lib/jenkins/workspace/terraform_pipeline/Jenkins_sample'
+        sh 'terraform init'
       }
     }
 
