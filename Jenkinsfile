@@ -1,21 +1,20 @@
+def bucket = 'jenkins-prashanth'
+def region = 'us-east-1'
+
 node{
 stage('build'){
   git 'https://github.com/Prashanth0797/Jenkins_sample'
   }
- stage('Upload') {
+  
+   stage('Push'){
+        sh "aws s3 cp ${commitID()}.zip s3://${bucket}"
+    }
+}
+ 
 
-        
-
-            pwd(); //Log current directory
-
-            
-
-                 def identity=awsIdentity();//Log AWS credentials
-
-                // Upload files from working directory 'dist' in your project workspace
-                s3Upload(bucket:"jenkins-prashanth", includePathPattern:'**/*');
-          
-
-       
-    }       
+def commitID() {
+    sh 'git rev-parse HEAD > .git/commitID'
+    def commitID = readFile('.git/commitID').trim()
+    sh 'rm .git/commitID'
+    commitID      
 }
