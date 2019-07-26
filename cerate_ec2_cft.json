@@ -1,13 +1,8 @@
-AWSTemplateFormatVersion: "2010-09-09"
-
-Resources:  
-    EC2Instance:
-        Type: "AWS::EC2::Instance"
-        Properties:
-            ImageId: "ami-0b898040803850657"
-            InstanceType: "t2.micro"
-
-            Tags:
-                -
-                    Key: "Name"
-                    Value: "Prashanth"
+{   "AWSTemplateFormatVersion": "2010-09-09",
+    "Resources": {
+        "EC2Instance": {
+            "Type": "AWS::EC2::Instance",
+            "Properties": {}
+        }
+    }
+}
